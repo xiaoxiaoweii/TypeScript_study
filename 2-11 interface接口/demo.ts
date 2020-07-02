@@ -14,6 +14,10 @@ interface Person {
 interface Teacher extends Person {
   teach(): string;
 }
+
+interface SayHi {
+  (word: string): string
+}
 /* type Person1 = {
   name: string;
 };
@@ -74,3 +78,7 @@ const teacher1 = {
 
 getPersonName1(teacher1);
 setPersonName1(teacher1, teacher1.name);
+
+const say: SayHi = (word: string) => {
+  return word;
+}
