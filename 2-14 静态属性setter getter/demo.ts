@@ -1,5 +1,5 @@
 // getter setter
-class Person {
+/* class Person {
   constructor(private _name: string) { }
   get name() {
     return this.name + 'xiaoxiaoweii';
@@ -14,4 +14,7 @@ const person = new Person('xiaoxiaoweii');
 person.name;
 console.log(person.name)
 person.name = 'xiaoxiaoweii xiaoxiaoweii';
-console.log(person.name)
+console.log(person.name) */
+
+
+
