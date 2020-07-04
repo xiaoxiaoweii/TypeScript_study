@@ -26,3 +26,5 @@ const url = `http://www.dell-lee.com/typescript/demo.html?secret=${secret}`;
 const anylyzer = xiaoxiaoweiiAnalyzer.getInstance();
 /* const anylyzer = new xiaoxiaoweiiAnalyzer(); */
 new Crowller(url, anylyzer);
+
+console.log("xiaoxiaoweii")
