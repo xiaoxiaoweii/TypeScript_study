@@ -1,0 +1,2 @@
+const teacher: string = 'xiaoxiaoweii'
+
