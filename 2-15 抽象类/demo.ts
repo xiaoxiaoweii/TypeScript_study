@@ -51,6 +51,6 @@ const student = {
 const getUserInfo = (user: teacher | student) => {
   console.log(user.name);
 }
-
+ 
 getUserInfo(teacher)
 getUserInfo(student)
