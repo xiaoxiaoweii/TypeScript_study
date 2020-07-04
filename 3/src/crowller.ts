@@ -5,14 +5,14 @@ import path from 'path';
 import xiaoxiaoweiiAnalyzer from './xiaoxiaoweiiAnalyzer'
 class Crowller {
   private filePath = path.resolve(__dirname, '../data/course.json');
-  async getRawHtml() {
+  private async getRawHtml() {
     const result = await superagent.get(this.url);
     return result.text;
   }
   writeFile(content: string) {
     fs.writeFileSync(this.filePath, content);
   }
-  async initSpiderProcess() {
+  private async initSpiderProcess() {
     const html = await this.getRawHtml()
     const fileContent = this.anylyzer.anylyze(html,this.filePath)
     this.writeFile(fileContent)
@@ -23,5 +23,6 @@ class Crowller {
 }
 const secret = 'secretKey';
 const url = `http://www.dell-lee.com/typescript/demo.html?secret=${secret}`;
-const anylyzer = new xiaoxiaoweiiAnalyzer();
+const anylyzer = xiaoxiaoweiiAnalyzer.getInstance();
+/* const anylyzer = new xiaoxiaoweiiAnalyzer(); */
 new Crowller(url, anylyzer);

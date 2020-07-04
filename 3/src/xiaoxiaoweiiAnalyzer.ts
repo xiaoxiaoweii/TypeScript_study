@@ -14,6 +14,13 @@ interface Content {
   [propName: number]: Course[];
 }
 export default class xiaoxiaoweiiAnalyzer {
+  private static instance: xiaoxiaoweiiAnalyzer;
+  static getInstance() {
+    if (!xiaoxiaoweiiAnalyzer.instance) {
+      xiaoxiaoweiiAnalyzer.instance = new xiaoxiaoweiiAnalyzer();
+    }
+    return xiaoxiaoweiiAnalyzer.instance
+  }
   private getCourseInfo(html: string) {
     const $ = cheerio.load(html);
     const courseItems = $('.course-item');
@@ -44,5 +51,9 @@ export default class xiaoxiaoweiiAnalyzer {
     const courseInfo = this.getCourseInfo(html);
     const fileContent = this.generateJsonContent(courseInfo, filePath);
     return JSON.stringify(fileContent)
+  }
+
+  private constructor() {
+    
   }
 }
