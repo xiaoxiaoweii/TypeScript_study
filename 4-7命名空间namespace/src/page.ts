@@ -1,11 +1,9 @@
-///<reference path='./components.ts'/>
+import { Header, Content, Footer } from './components';
 
-namespace Home {
-	export class Page {
-		constructor() {
-			new Components.Header();
-			new Components.Content();
-			new Components.Footer();
-		}
+class Page {
+	constructor() {
+		new Header();
+		new Content();
+		new Footer();
 	}
 }
