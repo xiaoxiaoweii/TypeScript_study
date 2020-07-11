@@ -1,0 +1,23 @@
+class Teacher {
+  constructor(info) {
+    this.info = info;
+  }
+
+  getInfo(key) {
+    // 类型保护
+    if (key === 'name' || key === 'age' || key === 'gender') {
+      return this.info[key];
+    }
+  }
+
+}
+
+const teacher = new Teacher({
+  name: 'xiaoxiaoweii',
+  age: 100,
+  gender: 'male'
+});
+/* 强制返回为string类型 不是最优写法 
+const test = teacher.getInfo('name') as string;
+console.log(test);
+*/
