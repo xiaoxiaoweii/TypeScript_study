@@ -12,15 +12,21 @@
   "exclude": [
     "./src/hello/**/*"
   ],
+  /* 
+    compilerOptions 编译器的选项
+  */
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Basic Options */
     // "incremental": true,                         /* Enable incremental compilation */
-    "target": "es5",
+    /* 指定ts编译的版本 */
+    "target": "es6",
     /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
-    "module": "commonjs",
+    /* 指定要使用的模块化的规范 */
+    "module": "system",
     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    /* 指定项目中要使用的库 默认是浏览器的使用环境 */
     // "lib": [],                                   /* Specify library files to be included in the compilation. */
     // "allowJs": true,                             /* Allow javascript files to be compiled. */
     // "checkJs": true,                             /* Report errors in .js files. */
@@ -28,8 +34,10 @@
     // "declaration": true,                         /* Generates corresponding '.d.ts' file. */
     // "declarationMap": true,                      /* Generates a sourcemap for each corresponding '.d.ts' file. */
     // "sourceMap": true,                           /* Generates corresponding '.map' file. */
-    // "outFile": "./",                             /* Concatenate and emit output to single file. */
-    // "outDir": "./",                              /* Redirect output structure to the directory. */
+    /* 将代码合并为一个文件 */
+    "outFile": "./dist/app.js",                             /* Concatenate and emit output to single file. */
+    /* 用来指定编译后文件所在的目录 */
+    "outDir": "./dist",                              /* Redirect output structure to the directory. */
     // "rootDir": "./",                             /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "composite": true,                           /* Enable project compilation */
     // "tsBuildInfoFile": "./",                     /* Specify file to store incremental compilation information */
